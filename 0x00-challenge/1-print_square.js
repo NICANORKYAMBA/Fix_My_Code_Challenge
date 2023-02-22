@@ -7,7 +7,7 @@
 */
 
 
-if (process.argv.length < 2) {
+if (process.argv.length <= 2) {
     process.stderr.write("Missing argument\n");
     process.stderr.write("Usage: ./1-print_square.js <size>\n");
     process.stderr.write("Example: ./1-print_square.js 8\n");
@@ -15,6 +15,11 @@ if (process.argv.length < 2) {
 }
 
 const size = parseInt(process.argv[2]);
+
+if (isNaN(size) || size <= 0) {
+    process.stderr.write("Error: Invalid size\n");
+    process.exit(1);
+}
 
 for (let i = 0 ; i < size ; i ++) {
     for (let j = 0 ; j < size ; j ++) {
