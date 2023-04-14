@@ -4,14 +4,14 @@ square class module
 """
 
 
-class square():
+class Square():
     """Describes the square"""
 
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """initializing the square"""
+        """initializing the class"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -30,8 +30,7 @@ class square():
 
 if __name__ == "__main__":
     """create an object instance of a square class"""
-
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
