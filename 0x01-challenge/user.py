@@ -7,7 +7,7 @@ User class
 class User():
     """ Documentation """
 
-    def __init__(self, email):
+    def __init__(self, email=None):
         """ Documentation """
         self.__email = email
 
@@ -27,7 +27,6 @@ class User():
 if __name__ == "__main__":
     """creating an object of user instance"""
 
-    u = User(email="john@snow.com")
-    print(u.email)
-    u.email = "john.doe@example.com"
+    u = User()
+    u.email = "john@snow.com"
     print(u.email)
